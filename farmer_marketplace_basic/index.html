@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Farmer Marketplace</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand">🌱 Farmer Marketplace</div>
+    <nav><a href="#market">Marketplace</a><a href="#sell">Sell Produce</a><a href="#cart">Cart <span id="cart-count">0</span></a></nav>
+  </header>
+  <section class="hero">
+    <div>
+      <p class="eyebrow">FRESH • LOCAL • FARM DIRECT</p>
+      <h1>Good food starts<br>with good farms.</h1>
+      <p>Buy fresh produce directly from local farmers.</p>
+      <a class="primary-btn" href="#market">Explore produce</a>
+    </div>
+    <div class="hero-art" aria-label="Fresh vegetables illustration">🥬 🍅 🥕</div>
+  </section>
+  <main>
+    <section id="market" class="section">
+      <div class="section-heading"><div><p class="eyebrow">FROM OUR FARMS</p><h2>Available produce</h2></div>
+        <input id="search" type="search" placeholder="Search produce..." aria-label="Search produce">
+      </div>
+      <div id="product-list" class="products"></div>
+    </section>
+    <section id="sell" class="section sell-section">
+      <div><p class="eyebrow">FOR FARMERS</p><h2>List your produce</h2><p>Add a product to the marketplace. This demo saves listings in your browser.</p></div>
+      <form id="product-form">
+        <label>Product name<input id="product-name" required placeholder="e.g. Fresh spinach"></label>
+        <div class="form-row">
+          <label>Price (₹ per unit)<input id="product-price" type="number" min="1" step="0.01" required placeholder="30"></label>
+          <label>Unit<input id="product-unit" required placeholder="kg, bunch, dozen"></label>
+        </div>
+        <label>Farmer / farm name<input id="farmer-name" required placeholder="e.g. Green Valley Farm"></label>
+        <label>Emoji (optional)<input id="product-emoji" placeholder="🥬" maxlength="4"></label>
+        <button class="primary-btn" type="submit">Add product</button>
+        <p id="form-message" class="message" role="status"></p>
+      </form>
+    </section>
+    <section id="cart" class="section cart-section">
+      <div class="section-heading"><div><p class="eyebrow">YOUR SELECTION</p><h2>Shopping cart</h2></div></div>
+      <div id="cart-items"></div>
+      <div class="cart-bottom"><strong id="cart-total">Total: ₹0.00</strong><button id="checkout" class="primary-btn">Place demo order</button></div>
+      <p id="order-message" class="message" role="status"></p>
+    </section>
+  </main>
+  <footer>🌿 Farmer Marketplace <span>Supporting local farms, one basket at a time.</span></footer>
+  <script src="script.js"></script>
+</body>
+</html>
